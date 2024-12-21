@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pride of Cows Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background">
+    <!-- Header -->
+    <div class="header">
+      <h1>Checkout</h1>
+      <span class="item-count"><span id="cart-counter">3</span> ITEMS</span>
+    </div>
+
+    <div class="container">
+      <!-- Summary Section -->
+      <div class="summary-section">
+        <h2>Order Summary</h2>
+
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="milk.jpg" alt="Milk Bottle">
+          <div class="product-details">
+            <p>Milk Bottle</p>
+            <p>$10.00</p>
+          </div>
+          <div class="quantity">
+            <button onclick="updateQuantity('milk', -1)">-</button>
+            <input type="number" id="milk" value="1" min="0" readonly title="Quantity of milk">
+            <button onclick="updateQuantity('milk', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="paneer.jpg" alt="Paneer">
+          <div class="product-details">
+            <p>Paneer</p>
+            <p>$15.00</p>
+          </div>
+          <div class="quantity">
+            <button onclick="updateQuantity('paneer', -1)">-</button>
+            <input type="number" id="paneer" value="1" min="0" readonly>
+            <button onclick="updateQuantity('paneer', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+          <img src="butter.jpg" alt="Butter">
+          <div class="product-details">
+            <p>Butter</p>
+            <p>$20.00</p>
+          </div>
+          <div class="quantity">
+            <button onclick="updateQuantity('butter', -1)">-</button>
+            <input type="number" id="butter" value="1" min="0" readonly>
+            <button onclick="updateQuantity('butter', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Coupon -->
+        <div class="coupon">
+          <input type="text" placeholder="Enter coupon code">
+          <button>Apply Coupon</button>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <p>Subtotal: <span id="subtotal">$45.00</span></p>
+          <p>Tax: <span id="tax">$6.28</span></p>
+          <p class="total">Total: <span id="total">$51.28</span></p>
+        </div>
+      </div>
+
+      <!-- Contact Form Section -->
+      <div class="contact-form-section">
+        <h2>Contact Information</h2>
+        <form>
+          <label for="name">First & Last Name</label>
+          <input type="text" id="name" placeholder="Enter first & last name" required>
+          <br>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter email address" required>
+          <br>
+          <label for="country">Country</label>
+          <input type="text" id="country" placeholder="Enter country" required>
+          <br>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Enter your message" required></textarea>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
